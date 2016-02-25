@@ -4,13 +4,13 @@ Template.body.helpers({
     return Polls.find();
   }
 
-  UI.registerHelper('indexedArray', function(context, options) {
-    if (context) {
-      return context.map(function(item, index) {
-        item._index = index;
-        return item;
-      });
-    }
-  });
+});
 
+UI.registerHelper('indexedArray', function(context, options) {
+  if (context) {
+    return context.map(function(item, index) {
+      item._index = index;
+      return item;
+    });
+  }
 });
